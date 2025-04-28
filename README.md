@@ -20,8 +20,8 @@ This project is primarily designed for [Sec-Sci AutoPT](https://www.security-sci
 Before starting, make sure following are in placed:
 
 - [Docker](https://www.docker.com/get-started) installed on the system.
-
 - Access to a running instance of the **Mutillidae** web application (e.g., on a local VM, internal network, or cloud).
+  - Install [Mutillidae](https://www.security-science.com/ethical-hacking/owasp-mutillidae-ii) if needed. 
 - (Optional) [Python](https://www.python.org/) installed and `pip install robotframework` if aiming to run tests manually without Docker.
 
 ---
