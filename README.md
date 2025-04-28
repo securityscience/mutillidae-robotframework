@@ -11,7 +11,7 @@ This project provides an automated test suite using **Robot Framework** and **Se
 - **Containerization**: All tools and dependencies are bundled inside a Docker image.
 - **Flexibility**: Supports passing different Mutillidae server addresses, users, and passwords via environment variables.
 
-This project is designed for security testing labs, demos, CI pipelines, or hands-on automation practice.
+This project is primarily designed for [Sec-Sci AutoPT](https://www.security-science.com/sec-sci-autopt) security testing simulation, CI pipelines, and hands-on automation practice.
 
 ---
 
