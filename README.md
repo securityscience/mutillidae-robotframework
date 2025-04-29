@@ -1,9 +1,9 @@
-## Mutillidae Robot Framework Automation
+# Mutillidae Robot Framework Automation
 
 This project provides an automated test suite using **Robot Framework** and **Selenium** to interact with a **Mutillidae** web application. It also includes a **Dockerized** environment, allowing to run the tests cleanly and consistently on any machine.
 
 
-### 📋 Project Overview
+## 📋 Project Overview
 
 - **Tests**: Basic registration and login functionality tests against Mutillidae.
 - **Frameworks Used**: Robot Framework + SeleniumLibrary.
@@ -13,7 +13,7 @@ This project provides an automated test suite using **Robot Framework** and **Se
 This project is primarily designed for [Sec-Sci AutoPT](https://www.security-science.com/sec-sci-autopt) security testing simulation, CI pipelines, and hands-on automation practice.
 
 
-### 🛠 Prerequisites
+## 🛠 Prerequisites
 
 Before starting, make sure following are in placed:
 
@@ -23,7 +23,7 @@ Before starting, make sure following are in placed:
 - (Optional) [Python](https://www.python.org/) installed and `pip install robotframework` if aiming to run tests manually without Docker.
 
 
-### ⚙️ Running Tests Locally (Without Docker)
+## ⚙️ Running Tests Locally (Without Docker)
 
 It can be run the tests directly on local machine:
 
@@ -42,7 +42,7 @@ robot --variable URL:http://192.168.1.11/index.php?page --variable USER:user1 --
 - `PASS`: The password to register/login.
 
 
-### 🐳 Building the Docker Image
+## 🐳 Building the Docker Image
 
 To build the Docker image that contains everything:
 
@@ -57,11 +57,11 @@ This command will:
 - Add and Trust a Burp Suite CA certificate (optional, for intercepting HTTPS traffic).
 
 
-### 🚀 Running the Docker Container
+## 🚀 Running the Docker Container
 
 There are two ways to run the Docker container depending on how to pass environment variables.
 
-#### Method 1: Pass Environment Variables Inline (-e flags)
+### Method 1: Pass Environment Variables Inline (-e flags)
 
 ```bash
 docker run --rm \
@@ -82,7 +82,7 @@ docker run --rm \
 ```
 
 
-#### Method 2: Using an `.env` File
+### Method 2: Using an `.env` File
 
 1. Create a `.env` file (e.g., `mutillidae.env`):
 
@@ -99,9 +99,8 @@ docker run --rm \
    ```
 Using an `.env` file is much cleaner, especially when dealing with multiple test environments.
 
----
 
-### 📝 Example `.env` File
+## 📝 Example `.env` File
 
 ```
 URL=http://192.168.1.11/index.php?page
@@ -114,7 +113,7 @@ PASS=pass1
 - Make sure the URL ends with `page`, without a trailing `=` or anything extra.
 
 
-### 📎 Project Structure
+## 📎 Project Structure
 
 ```
 .
@@ -128,7 +127,7 @@ PASS=pass1
 ```
 
 
-### 🛠 Additional Notes
+## 🛠 Additional Notes
 
 - **Registration Test**: The Robot Framework test waits for the text **inserted** to appear after registration to confirm success.
 - **Login Test**: The Robot Framework test waits for the text **Logout** to appear after login to confirm success.
@@ -137,7 +136,7 @@ PASS=pass1
   - Interception rules should not block redirects or modify server responses.
 
 
-## 🛠 Troubleshooting
+# 🛠 Troubleshooting
 
 Here are some common issues and their solutions:
 
@@ -151,7 +150,7 @@ Here are some common issues and their solutions:
 | **Wrong ChromeDriver version** | Selenium requires the ChromeDriver to match Chrome version exactly | Use the correct `selenium/standalone-chrome` tag matching with the Chrome version.       |
 
 
-## ✅ Summary
+# ✅ Summary
 
 This setup provides a lightweight, fast, and flexible way to automate security lab setups like Mutillidae. With a fully Dockerized environment, consistent results across machines are guaranteed — whether testing manually, integrating into CI/CD, or setting up training labs. 🚀
 
