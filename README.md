@@ -52,10 +52,18 @@ docker build -t mutillidae-robotframework:local .
 
 This command will:
 - Pull the official `selenium/standalone-chrome` image.
-- Install Robot Framework and SeleniumLibrary
+- Install Robot Framework and SeleniumLibrary.
 - Copy test scripts inside the image.
 - Add and Trust a Burp Suite CA certificate (optional, for intercepting HTTPS traffic).
 
+
+## 📥 Pull From Docker Hub
+
+The pre-built docker image can be pulled from [Docker Hub](https://hub.docker.com/r/securityscience/mutillidae-robotframework) using the following command.
+
+```bash
+docker pull securityscience/mutillidae-robotframework:latest
+```
 
 ## 🚀 Running the Docker Container
 
@@ -152,6 +160,6 @@ Here are some common issues and their solutions:
 
 # ✅ Summary
 
-This setup provides a lightweight, fast, and flexible way to automate security lab setups like Mutillidae. With a fully Dockerized environment, consistent results across machines are guaranteed — whether testing manually, integrating into CI/CD, or setting up training labs. 🚀
+This setup provides a lightweight, fast, and flexible way to automate security lab setups like Mutillidae. With a fully Dockerized environment, consistent results across machines are guaranteed — whether testing manually, integrating into CI/CD, or setting up training labs.
 
 **Note**: If using Burp Suite or intercepting traffic, be careful with SSL/TLS and redirects!
