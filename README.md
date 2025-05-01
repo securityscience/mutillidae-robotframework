@@ -143,7 +143,6 @@ PASS=pass1
   - Ensure the container trusts the Burp CA cert.
   - Interception rules should not block redirects or modify server responses.
 
-
 ## 🛠 Troubleshooting
 
 Here are some common issues and their solutions:
