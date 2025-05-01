@@ -1,4 +1,4 @@
-# Mutillidae Robot Framework Automation
+## Mutillidae Robot Framework Automation
 
 This project provides an automated test suite using **Robot Framework** and **Selenium** to interact with a **Mutillidae** web application. It also includes a **Dockerized** environment, allowing to run the tests cleanly and consistently on any machine.
 
@@ -144,7 +144,7 @@ PASS=pass1
   - Interception rules should not block redirects or modify server responses.
 
 
-# 🛠 Troubleshooting
+## 🛠 Troubleshooting
 
 Here are some common issues and their solutions:
 
@@ -158,7 +158,7 @@ Here are some common issues and their solutions:
 | **Wrong ChromeDriver version** | Selenium requires the ChromeDriver to match Chrome version exactly | Use the correct `selenium/standalone-chrome` tag matching with the Chrome version.       |
 
 
-# ✅ Summary
+## ✅ Summary
 
 This setup provides a lightweight, fast, and flexible way to automate security lab setups like Mutillidae. With a fully Dockerized environment, consistent results across machines are guaranteed — whether testing manually, integrating into CI/CD, or setting up training labs.
 
