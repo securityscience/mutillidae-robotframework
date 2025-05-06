@@ -2,6 +2,7 @@
 
 This project provides an automated test suite using **Robot Framework** and **Selenium** to interact with a **Mutillidae** web application. It also includes a **Dockerized** environment, allowing to run the tests cleanly and consistently on any machine.
 
+
 ## Project Overview
 
 - **Tests**: Basic registration and login functionality tests against Mutillidae.
