@@ -26,6 +26,7 @@ Open Browser To Start
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --ignore-certificate-errors
     Open Browser    about:blank    ${BROWSER}    options=${options}
 
 Register New User
