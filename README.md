@@ -51,7 +51,7 @@ docker build -t mutillidae-robotframework:local .
 ```
 
 This command will:
-- Pull the official `selenium/standalone-chrome` image.
+- Pull the official `python:3.11-slim` image.
 - Install Robot Framework and SeleniumLibrary.
 - Copy test scripts inside the image.
 - Add and Trust a Burp Suite CA certificate (optional, for intercepting HTTPS traffic).
@@ -79,6 +79,16 @@ docker run --rm \
   mutillidae-robotframework:local
 ```
 
+or
+
+```bash
+docker run --rm \
+  -e URL="http://<Mutillidae-IP-Address>/index.php?page" \
+  -e USER="<username>" \
+  -e PASS="<password>" \
+  securityscience/mutillidae-robotframework:latest
+```
+
 Example:
 
 ```bash
@@ -89,13 +99,22 @@ docker run --rm \
   mutillidae-robotframework:local
 ```
 
+or
+
+```bash
+docker run --rm \
+  -e URL="http://192.168.1.11/index.php?page" \
+  -e USER="user1" \
+  -e PASS="pass1" \
+  securityscience/mutillidae-robotframework:latest
+```
 
 ### Method 2: Using an `.env` File
 
 1. Create a `.env` file (e.g., `mutillidae.env`):
 
    ```
-   URL=http://192.168.1.11/index.php?page
+   URL=http://<Mutillidae-IP-Address>/index.php?page
    USER=user1
    PASS=pass1
    ```
@@ -105,6 +124,13 @@ docker run --rm \
    ```bash
    docker run --rm --env-file mutillidae-dkr.env mutillidae-robotframework:local
    ```
+   
+   or
+   
+   ```bash
+   docker run --rm --env-file mutillidae-dkr.env securityscience/mutillidae-robotframework:latest
+   ```
+   
 Using an `.env` file is much cleaner, especially when dealing with multiple test environments.
 
 
@@ -117,7 +143,7 @@ PASS=pass1
 ```
 
 **Important:**  
-- Do not add quotes `"` in the `.env` file unlessexplicitly needed.
+- Do not add quotes `"` in the `.env` file unless explicitly needed.
 - Make sure the URL ends with `page`, without a trailing `=` or anything extra.
 
 
@@ -161,4 +187,18 @@ Here are some common issues and their solutions:
 
 This setup provides a lightweight, fast, and flexible way to automate security lab setups like Mutillidae. With a fully Dockerized environment, consistent results across machines are guaranteed — whether testing manually, integrating into CI/CD, or setting up training labs.
 
-**Note**: If using Burp Suite or intercepting traffic, be careful with SSL/TLS and redirects!
+**Note**: If using BurpSuite or intercepting traffic, be careful with SSL/TLS and redirects!
+
+
+## Penetration Testing Simulation for Sec-Sci AutoPT
+
+These RobotFramework is designed to simulate penetration testing using [Sec-Sci AutoPT](https://www.security-science.com/sec-sci-autopt), an automated penetration testing framework.
+
+
+## Support
+
+If encounter issues, bugs or suggestions:
+
+- Submit an [Issue](https://github.com/securityscience/Mutillidae-RobotFramework/issues)
+- Contact: [RnD@security-science.com](mailto:RnD@security-science.com)
+- Or [https://www.security-science.com/contact](https://www.security-science.com/contact)
